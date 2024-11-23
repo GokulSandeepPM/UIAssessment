@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+	  <!-- Desktop Navigation -->
+	  <div class="header-desktop">
+		<div class="logo">Store</div>
+		<nav class="nav-links">
+		  <a href="#" class="nav-active">Home</a>
+		  <a href="#">Women</a>
+		  <a href="#">Men</a>
+		  <a href="#">Smart Gear</a>
+		  <a href="#">Accessories</a>
+		</nav>
+		
+		<div class="cart-container">
+		  <input type="text" id="search" placeholder="Search products...">
+		  <span class="cart-icon">
+			<img src='icons/cart.png'>
+		  </span>
+		  <span class="cart-count">10</span>
+		</div>
+	  </div>
+
+	  <!-- Mobile Navigation -->
+	  <div class="header-mobile">
+		<button class="menu-toggle" id="toggle-sidebar" >☰</button>
+		<div class="logo">Store</div>
+		<div class="cart-container">
+		  <!-- <input type="text" id="search" placeholder="Search products..."> -->
+		  <span class="cart-icon">
+			<img src='icons/cart.png'>
+		  </span>
+		  <span class="cart-count">10</span>
+		</div>
+	  </div>
+	</header>
+	
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar Filters -->
+        <aside id="sidebar" class="sidebar hidden">
+			<button id="close-sidebar" class="close-sidebar-btn">
+				<img src="icons/close.png">
+			</button>
+			
+            <h2>Filters</h2>
+            <div id="category-filters" class="checkbox-filters">
+                <!-- Categories will be dynamically generated -->
+            </div>
+			<div id="price-filter" class="price-filter">
+				<h3>Price Range</h3>
+
+				<div class="price-inputs">
+					<input type="number" id="min-price" placeholder="Min Price" />
+					<input type="number" id="max-price" placeholder="Max Price" />
+				</div>
+				
+				<div class="range-container">
+					<div class="slider"></div>
+					<div class="range" id="range"></div>
+					<div class="thumb thumb1" id="thumb1"></div>
+					<div class="thumb thumb2" id="thumb2"></div>
+				</div>
+			</div>
+        </aside>
+
+        <!-- Product Section -->
+        <main>
+			<input type="text" class="mobileSearch" id="mobileSearch" placeholder="Search products..." >
+            <div class="sorting">
+                <select id="sort">
+                    <option value="">Sort By</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                </select>
+            </div>
+            <section id="product-list" class="product-list">
+                <!-- Products will be dynamically rendered here -->
+            </section>
+            <button id="load-more" class="load-more">Load More</button>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer" style="display: none;">
+		<div class="footer-top">
+			<div class="footer-section">
+				<h3>Account</h3>
+				<ul>
+					<li><a href="#">Sign In</a></li>
+					<li><a href="#">Register</a></li>
+					<li><a href="#">Order Status</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h3>About Us</h3>
+				<ul>
+					<li><a href="#">Our Story</a></li>
+					<li><a href="#">Careers</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h3>Help</h3>
+				<ul>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Order Status</a></li>
+					<li><a href="#">Returns</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h3>Follow Us!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				<div class="social-icons">
+					<a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+					<a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+					<a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>© Company Name Address Ave, City Name, State ZIP</p>
+			<div class="footer-links">
+				<a href="#">Terms of Use</a>
+				<a href="#">Privacy Policy</a>
+			</div>
+		</div>
+	</footer>
+
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
